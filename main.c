@@ -21,13 +21,13 @@ int main(int argc, char *argv[]) {
         printf("%i", tmp);
         return tmp;
     }
-    int res = strcmp(argv[1], "getch");
+    int res = strcmp(argv[1], "kbhit");
     if (res == 0) {
-        int tmp = phpgetch();
+        int tmp = phpkbhit();
         printf("%i", tmp);
         return tmp;
     }
-    int tmp = phpkbhit();
+    int tmp = phpgetch();
     printf("%i", tmp);
     return tmp;
 }
