@@ -8,16 +8,19 @@ It is a simple executable for Windows x64 that wrappers the getch() and the kbhi
 
 ## Usage:
 
-Download the executable and runs in cmd.exe or PowerShell as follows
+Download the executable and runs it using Cmd.exe or PowerShell as follows
 
 ```shell
-getch
+getch.exe
 ```
 and press any key to show its value
 
-Or if you don't want to wait:
+Or if you don't want to wait: 
 
 ```shell
-getch kbhit
+getch.exe kbhit
 ```
+
+> getch.exe kbhit could return 0 (no key pressed). This function is aimed to be run in a loop.
+ 
 
