@@ -3,10 +3,11 @@
 #include <conio.h>
 
 int phpgetch() {
-    if (getch() == 224) { // ESC
-        return 0xE000 + getch();
-
+    int gc=getch();
+    if (gc== 224 || gc==0) { // ESC
+        return 0x1B00 + getch(); // ESC LINUX FORMAT.
     }
+    return gc;
 }
 
 int phpkbhit() {
