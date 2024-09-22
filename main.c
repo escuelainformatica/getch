@@ -3,12 +3,15 @@
 #include <conio.h>
 
 int phpgetch() {
-    return getch();
+    if (getch() == 224) { // ESC
+        return 0xE000 + getch();
+
+    }
 }
 
 int phpkbhit() {
     if (kbhit()) {
-        return getch();
+        return phpgetch();
     }
     return 0;
 }
